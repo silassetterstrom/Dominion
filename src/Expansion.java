@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.io.*;
 
 public class Expansion {
 
@@ -28,6 +29,25 @@ public class Expansion {
 		cards.add(c);
 	}
 	
+	public void addByFile(File input) {
+		clearAll();
+		try {
+			BufferedReader reader= new BufferedReader(new FileReader(input));
+			String line = reader.readLine();
+			String[] parts;
+			while(line != null) {
+				parts = line.split(",");
+				Card c = new Card(parts[0].trim(), Integer.parseInt(parts[1].trim()));
+				addCard(c);
+				line = reader.readLine();
+			}
+			reader.close();
+		} catch (Exception e) {
+			System.out.println("Error with input file");
+			e.printStackTrace();
+		}
+	}
+	
 	public void removeCard(String name) {
 		int location = -1;
 		for(int i = 0; i < cards.size(); i++) {
@@ -39,6 +59,10 @@ public class Expansion {
 		if(location != -1) {
 			cards.remove(location);
 		}
+	}
+	
+	public void clearAll() {
+		cards.clear();
 	}
 	
 	public void print() {

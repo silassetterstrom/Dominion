@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.io.*;
 
 public class Randomize {
 
@@ -20,32 +21,11 @@ public class Randomize {
 	}
 	
 	public static void main(String[] args) {
-		Expansion e = new Expansion();
-		e.addCard(new Card("Village", 5));
-		e.addCard(new Card("Market", 5));
-		e.addCard(new Card("Festival", 5));
-		e.addCard(new Card("Cellar", 2));
-		e.addCard(new Card("Chapel", 2));
-		e.addCard(new Card("Moat", 2));
-		e.addCard(new Card("Workshop", 3));
-		e.addCard(new Card("Bureaucrat", 4));
-		e.addCard(new Card("Militia", 4));
-		e.addCard(new Card("Moneylender", 4));
-		e.addCard(new Card("Remodel", 4));
-		e.addCard(new Card("Smithy", 4));
-		e.addCard(new Card("Throne Room", 4));
-		e.addCard(new Card("Council Room", 5));
-		e.addCard(new Card("Laboratory", 5));
-		e.addCard(new Card("Mine", 5));
-		e.addCard(new Card("Library", 5));
-		e.addCard(new Card("Witch", 5));
-		e.addCard(new Card("Spy", 4));
-		e.addCard(new Card("Thief", 4));
-		e.addCard(new Card("Woodcutter", 3));
-//		e.print();
-		ArrayList<Expansion> test = new ArrayList<Expansion>();
-		test.add(e);
-		Randomize gen = new Randomize(test);
+		ArrayList<Expansion> testRand = new ArrayList<Expansion>();
+		Expansion testExp = new Expansion();
+		File fileName = new File("src/BaseSet.txt");
+		testExp.addByFile(fileName);
+		Randomize gen = new Randomize(testRand);
 		ArrayList<Card> testCards = gen.getCardSet();
 		for(int i = 0; i < testCards.size(); i++) {
 			System.out.println(testCards.get(i).getName());

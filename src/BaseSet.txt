@@ -1,0 +1,13 @@
+Militia, 4
+Market, 5
+Village, 3
+Moneylender, 4
+Thief, 4
+Witch, 5
+Cellar, 2
+Workshop, 3
+Festival, 5
+Moat, 2
+Spy, 4
+Bureaucrat, 4
+Adventurer, 6
