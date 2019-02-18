@@ -1,0 +1,35 @@
+Poor House, 1
+Beggar, 2
+Squire, 2
+Vagrant, 2
+Forager, 3
+Death Cart, 4
+Feodum, 4
+Fortress, 4
+Ironmonger, 4
+Marauder, 4
+Catacombs, 5
+Count, 5
+Counterfeit, 5
+Cultist, 5
+Graverobber, 5
+Altar, 6
+Hunting Grounds, 6
+Hermit, 3
+Market Square, 3
+Sage, 3
+Storeroom, 3
+Urchin, 3
+Armory, 4
+Procession, 4
+Rats, 4
+Scavenger, 4
+Wandering Minstrel, 4
+Band of Misfits, 5
+Bandit Camp, 5
+Junk Dealer, 5
+Knights, 5
+Mystic, 5
+Pillage, 5
+Rebuild, 5
+Rogue, 5

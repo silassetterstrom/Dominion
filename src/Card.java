@@ -15,4 +15,8 @@ public class Card {
 	public int getCost() {
 		return this.cost;
 	}
+	
+	public void print() {
+		System.out.println(this.name + " " + this.cost);
+	}
 }

@@ -1,0 +1,25 @@
+Loan, 3
+Trade Route, 3
+Watchtower, 3
+Bishop, 4
+Monument, 4
+Quarry, 4
+Mint, 5
+Mountebank, 5
+Rabble, 5
+Royal Seal, 5
+Vault, 5
+Venture, 5
+Forge, 7
+King's Court, 7
+Peddler, 8
+Talisman, 4
+Worker's Village, 4
+City, 5
+Contraband, 5
+Counting House, 5
+Goons, 6
+Grand Market, 6
+Hoard, 6
+Bank, 7
+Expand, 7
