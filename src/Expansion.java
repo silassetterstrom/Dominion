@@ -4,6 +4,7 @@ import java.io.*;
 public class Expansion {
 
 	private ArrayList<Card> cards;
+	private String name;
 	
 	public Expansion(ArrayList<Card> cards) {
 		this.cards = cards;
@@ -19,6 +20,14 @@ public class Expansion {
 	
 	public Card getCardByIndex(int index) {
 		return cards.get(index);
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	public int getSize() {
