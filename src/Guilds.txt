@@ -1,0 +1,12 @@
+Candlestick Maker, 2
+Stonemason, 2
+Doctor, 2
+Masterpiece, 3
+Advisor, 4
+Plaza, 4
+Taxman, 4
+Herald, 4
+Baker, 5
+Journeyman, 5
+Merchant Guild, 5
+Soothsayer, 5

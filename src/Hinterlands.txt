@@ -1,0 +1,26 @@
+Crossroads, 2
+Duchess, 2
+Fool's Gold, 2
+Develop, 3
+Oasis, 3
+Oracle, 3
+Scheme, 3
+Tunnel, 3
+Jack of all Trades, 4
+Noble Brigand, 4
+Nomad Camp, 4
+Silk Road, 4
+Spice Merchant, 4
+Trader, 4
+Cache, 5
+Cartographer, 5
+Embassy, 5
+Haggler, 5
+Highway, 5
+Ill-Gotten Gains, 5
+Inn, 5
+Mandarin, 5
+Margrave, 5
+Stables, 5
+Border Village, 6
+Farmland, 6

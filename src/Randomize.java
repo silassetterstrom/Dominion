@@ -169,10 +169,18 @@ public class Randomize {
 		Expansion testExp1 = new Expansion();
 		Expansion testExp2 = new Expansion();
 		Expansion testExp3 = new Expansion();
+		Expansion testExp4 = new Expansion();
+		Expansion testExp5 = new Expansion();
+		Expansion testExp6 = new Expansion();
+		Expansion testExp7 = new Expansion();
 		
 		File base = new File("./BaseSet.txt");
 		File prosperity = new File("./Prosperity.txt");
 		File dark = new File("./DarkAges.txt");
+		File seaside = new File("./Seaside.txt");
+		File hinterlands = new File("./Hinterlands.txt");
+		File guilds = new File("./Guilds.txt");
+		File cornucopia = new File("./Cornucopia.txt");
 		
 		testExp1.addByFile(base);
 		testExp1.setName("Base Set");
@@ -180,9 +188,21 @@ public class Randomize {
 		testExp2.setName("Prosperity");
 		testExp3.addByFile(dark);
 		testExp3.setName("Dark Ages");
+		testExp3.addByFile(seaside);
+		testExp4.setName("Seaside");
+		testExp3.addByFile(hinterlands);
+		testExp5.setName("Hinterlands");
+		testExp3.addByFile(guilds);
+		testExp6.setName("Guilds");
+		testExp3.addByFile(cornucopia);
+		testExp7.setName("Cornucopia");
 		kingdom.add(testExp1);
 		kingdom.add(testExp2);
 		kingdom.add(testExp3);
+		kingdom.add(testExp4);
+		kingdom.add(testExp5);
+		kingdom.add(testExp6);
+		kingdom.add(testExp7);
 		
 		userLoop(kingdom);
 		System.out.println("Thank you for using the Dominion Randomizer! The program will now exit.");
