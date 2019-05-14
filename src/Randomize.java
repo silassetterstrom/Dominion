@@ -95,17 +95,26 @@ public class Randomize {
 	}
 	
 	public static void userLoop(ArrayList<Expansion> kingdom) {
-		System.out.println("Welcome to the Dominion Randomizer. Here are the loaded expansions:");
+		ArrayList<Expansion> savedParam = new ArrayList<Expansion>();
 		for(int i = 0; i < kingdom.size(); i++) {
-			System.out.println((i+1) + ") " + kingdom.get(i).getName());
+			savedParam.add(kingdom.get(i));
 		}
-		System.out.println("Are there any you'd like to exclude? Enter the number" + 
-				" of the expansion to remove it or 0 to continue.");
-		
 		int exitFlag = 1;
 		Scanner scan = new Scanner(System.in);
 		
 		while(exitFlag == 1) {
+			kingdom.clear();
+			for(int i = 0; i < savedParam.size(); i++) {
+				kingdom.add(savedParam.get(i));
+			}
+			
+			System.out.println("Welcome to the Dominion Randomizer. Here are the loaded expansions:");
+			for(int i = 0; i < kingdom.size(); i++) {
+				System.out.println((i+1) + ") " + kingdom.get(i).getName());
+			}
+			System.out.println("Are there any you'd like to exclude? Enter the number" + 
+					" of the expansion to remove it or 0 to continue.");
+			
 			try {
 				int remove = scan.nextInt();
 				while(remove != 0) {
@@ -120,44 +129,44 @@ public class Randomize {
 					remove = scan.nextInt();
 				}
 
-			System.out.print("Randomizing with expansions: ");
-			for(int i = 0; i < kingdom.size(); i++) {
-				System.out.print(kingdom.get(i).getName() + ". ");
-			} 
+				System.out.print("Randomizing with expansions: ");
+				for(int i = 0; i < kingdom.size(); i++) {
+					System.out.print(kingdom.get(i).getName() + ". ");
+				} 
 		
-			System.out.println("\n");
-			System.out.println("Here is your randomized set: ");
-			Randomize gen = new Randomize(kingdom);
-			ArrayList<Card> randomizedCards = gen.randGen();
-			randomizedCards = sortCards(randomizedCards);
-			for(int i = 0; i < randomizedCards.size(); i++) {
-				System.out.print((i+1) + ") ");
-				randomizedCards.get(i).print();
-			}
-			
-			System.out.println("Would you like to replace a card? Enter the number of the card if "
-					+ "yes, otherwise enter 0.");
-			int cardNumber = scan.nextInt();
-			while(cardNumber != 0) {
-				randomizedCards = replaceCard(kingdom, randomizedCards, cardNumber-1);
-				System.out.println("Card replaced. Here is your new set: ");
+				System.out.println("\n");
+				System.out.println("Here is your randomized set: ");
+				Randomize gen = new Randomize(kingdom);
+				ArrayList<Card> randomizedCards = gen.randGen();
 				randomizedCards = sortCards(randomizedCards);
 				for(int i = 0; i < randomizedCards.size(); i++) {
 					System.out.print((i+1) + ") ");
 					randomizedCards.get(i).print();
 				}
-				System.out.println("Would you like to replace another card? Enter the number of "
-						+ "the card if yes, otherwise enter 0.");
-				cardNumber = scan.nextInt();
-			}
 			
-			System.out.println("Would you like to randomize again? Enter '1' to randomize again"
-					+ " or '0' to exit.");
-			exitFlag = scan.nextInt();
-		} catch (Exception e) {
-			System.out.println("Error: Incorrect input.");
-			scan.close();
-			return;
+				System.out.println("Would you like to replace a card? Enter the number of the card if "
+						+ "yes, otherwise enter 0.");
+				int cardNumber = scan.nextInt();
+				while(cardNumber != 0) {
+					randomizedCards = replaceCard(kingdom, randomizedCards, cardNumber-1);
+					System.out.println("Card replaced. Here is your new set: ");
+					randomizedCards = sortCards(randomizedCards);
+					for(int i = 0; i < randomizedCards.size(); i++) {
+						System.out.print((i+1) + ") ");
+						randomizedCards.get(i).print();
+					}
+					System.out.println("Would you like to replace another card? Enter the number of "
+							+ "the card if yes, otherwise enter 0.");
+					cardNumber = scan.nextInt();
+				}
+			
+				System.out.println("Would you like to randomize again? Enter '1' to randomize again"
+						+ " or '0' to exit.");
+				exitFlag = scan.nextInt();
+			} catch (Exception e) {
+				System.out.println("Error: Incorrect input.");
+				scan.close();
+				return;
 			}
 		}
 		scan.close();
@@ -188,13 +197,13 @@ public class Randomize {
 		testExp2.setName("Prosperity");
 		testExp3.addByFile(dark);
 		testExp3.setName("Dark Ages");
-		testExp3.addByFile(seaside);
+		testExp4.addByFile(seaside);
 		testExp4.setName("Seaside");
-		testExp3.addByFile(hinterlands);
+		testExp5.addByFile(hinterlands);
 		testExp5.setName("Hinterlands");
-		testExp3.addByFile(guilds);
+		testExp6.addByFile(guilds);
 		testExp6.setName("Guilds");
-		testExp3.addByFile(cornucopia);
+		testExp7.addByFile(cornucopia);
 		testExp7.setName("Cornucopia");
 		kingdom.add(testExp1);
 		kingdom.add(testExp2);
